@@ -1,0 +1,75 @@
+python font2img.py --src_font /home/zw/Desktop/zi2zi-master/font/simhei.ttf  --dst_font /home/zw/Desktop/zi2zi-master/font/simsun.ttc  --charset=CN --sample_count=4000 --sample_dir=/home/zw/Desktop/zi2zi-master/experiment/testimg  --label=0 --filter=1 --shuffle=1
+
+python font2img.py --src_font ./font/yuan.ttf  --dst_font ./font/HYXiXingKaiW.ttf  --charset=CN --sample_count=1000 --sample_dir=./experiment/testimg  --label=0 --filter=1 --shuffle=0 --char_size=220
+
+
+sudo docker run --runtime nvidia -it -v /home:/home tensorflow/tensorflow:1.8.0-gpu bash
+
+
+
+
+python package.py --dir /home/zw/Desktop/zi2zi-master/experiment/testimg --save_dir /home/zw/Desktop/zi2zi-master/experiment/data --split_ratio 0.1
+
+python package.py --dir ./experiment/testimg --save_dir ./experiment/data --split_ratio 0.1
+
+python train.py --experiment_dir /home/zw/Desktop/zi2zi-master/experiment --experiment_id=0 --batch_size=16 --lr=0.001 --epoch=300 --sample_steps=50 --schedule=20 --L1_penalty=100 --Lconst_penalty=15
+python train.py --experiment_dir ./experiment --experiment_id=65 --batch_size=8  --lr=0.002 --epoch=400 --sample_steps=40 --schedule=20 --L1_penalty=100 --Lconst_penalty=15
+
+
+
+python infer.py --model_dir /home/zw/Desktop/zi2zi-master/experiment/checkpoint/experiment_8_batch_16 --batch_size 100 --source_obj /home/zw/Desktop/zi2zi-master/experiment/data/val.obj --embedding_ids 0,1 --save_dir /home/zw/Desktop/zi2zi-master/experiment/result --output_gif created_git.gif --interpolate=0 --steps=10 --uroboros=1
+
+
+
+python infer.py --model_dir ./experiment/checkpoint/experiment_0_batch_16 --batch_size 100 --source_obj ./experiment/data/val.obj --embedding_ids 0,1 --save_dir ./experiment/result --output_gif created_git.gif --interpolate=1 --steps=10 --uroboros=1
+
+$CUDA_VISIBLE_DEVICES=0,1 
+  
+imageio=2.4.1
+ keras-2.2.4
+ pip install tflearn==0.3.2
+
+
+import os
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
+
+
+python main.py --input_height 96 --output_height 96 --dataset faces --crop True --train True  --epoch 10
+
+
+
+python font.py --src_font ./font/111.ttf  --dst_font ./font/src1070new.ttf  --charset=CN --sample_count=4000 --sample_dir=./experiment/testimg  --label=0 --filter=1 --shuffle=1
+
+
+
+python font.py --src_font ./font/1111.ttf  --dst_font ./font/src1070new.ttf  --charset=CN --sample_count=800  --sample_dir=./experiment/111  --label=0 --filter=1 --shuffle=1
+
+\
+
+docker
+
+ sudo docker run --runtime nvidia -it -v /home:/home tensorflow/tensorflow:latest-gpu bash
+
+1  --dst_font 目标字体   执行命令前 先删除test内的图片 
+ 
+python font2img.py --src_font ./font/yuan.ttf  --dst_font ./font/AliHYAiHei.ttf  --charset=CN --sample_count=200 --sample_dir=./experiment/testimg  --label=0 --filter=1 --shuffle=0 --char_size=220
+
+2 
+python package.py --dir ./experiment/testimg --save_dir ./experiment/data --split_ratio 0.1
+
+3
+
+python train.py --experiment_dir ./experiment --experiment_id=73 --batch_size=8  --lr=0.002 --epoch=400 --sample_steps=40 --schedule=20 --L1_penalty=100 --Lconst_penalty=15
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+python infer.py --model_dir /home/zw/Desktop/zi2zi-master/experiment/checkpoint/experiment_8_batch_16 --batch_size 10 --source_obj /home/zw/Desktop/zi2zi-master/experiment/data/val.obj --embedding_ids 0,1 --save_dir /home/zw/Desktop/zi2zi-master/experiment/result --output_gif created_git.gif --interpolate=1 --steps=10 --uroboros=1
+使生成字体保持连贯
+
+
+python font2img.py --src_font /home/zw/Desktop/zi2zi-master/font/HiraginoSansGB-Bold.otf  --dst_font /home/zw/Desktop/zi2zi-master/font/simhei.ttf  --charset=CN --sample_count=100 --sample_dir=/home/zw/Desktop/zi2zi-master/experiment/testimg  --label=0 --filter=1 --shuffle=0
+不让字体分类顺序打乱
+
+
+python train.py --experiment_dir /home/zw/Desktop/zi2zi-master/experiment --experiment_id=7  --batch_size=16 --lr=0.001 --epoch=2500 --sample_steps=100 --schedule=20 --L1_penalty=100 --Lconst_penalty=15
+
+  
+
+python train.py --experiment_dir /home/zw/Desktop/zi2zi-master/experiment --experiment_id=13  --batch_size=16 --lr=0.001 --epoch=2000 --sample_steps=100 --schedule=20 --L1_penalty=100 --Lconst_penalty=15
+

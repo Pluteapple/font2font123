@@ -1,6 +1,8 @@
 # font2font123
 
 数据集均是汉仪所下字库，由font2img转成字体图像
+
+
 <img width="655" alt="image" src="https://github.com/apple951/font2font123/assets/53884371/1e368688-06a9-494c-bac7-98163a750213">
 
 
@@ -15,6 +17,7 @@ python font2img.py --src_font ./font/yuan.ttf  --dst_font ./font/AliHYAiHei.ttf 
 3 python train.py --experiment_dir ./experiment --experiment_id=73 --batch_size=8  --lr=0.002 --epoch=400 --sample_steps=40 --schedule=20 --L1_penalty=100 --Lconst_penalty=15
 
 ## fontgen操作
+
 
 conda activate lxnew1
 

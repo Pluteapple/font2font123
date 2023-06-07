@@ -1,6 +1,8 @@
 # font2font123
 
 数据集均是汉仪所下字库，由font2img转成字体图像
+<img width="655" alt="image" src="https://github.com/apple951/font2font123/assets/53884371/1e368688-06a9-494c-bac7-98163a750213">
+
 
 ## font2font操作
 
